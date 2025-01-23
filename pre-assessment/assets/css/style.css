@@ -1,27 +1,18 @@
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-    #container {
-        max-width: 100%;
-        margin: 0;
-    }
-	/* Declares the Media screen to max width of 600px */
-}
-
 * {
 	margin: 0px;
 	padding: 0px;
-	background-image: url('/pre-assessment/img/bg-tile.jpg');
-	background-repeat: repeat-x;
-	background-color: #171717;
 }
+/* resets box model */
 body {
 	text-align: center;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #171717;
 	font-size: 16px;
 	line-height: 1.5em;
+	background-image: url("../img/bg-tile.jpg");
+	background-repeat: repeat-x;
 }
+
 #container {
 	max-width: 800px;
 	margin-right: auto;
@@ -31,6 +22,19 @@ body {
 	margin-top: 20px;
 	border: 1px solid #CCC;
 }
+
+
+#header h1 {
+	width: 800px;
+	height: 140px;
+	display:block;
+	background-image: url("../img/logo1.jpg");
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
 #nav {
 	background-color: #000;
 }
