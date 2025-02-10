@@ -10,7 +10,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+  
 html {
   color: #222;
   font-size: 1em;
@@ -62,7 +62,12 @@ hr {
 audio,
 canvas,
 iframe,
-img,
+img {
+  max-width: 50%;
+  max-height: 50%;
+  align-items: center;
+}
+
 svg,
 video {
   vertical-align: middle;
