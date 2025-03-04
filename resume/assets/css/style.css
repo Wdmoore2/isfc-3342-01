@@ -12,10 +12,23 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #acd68b;
   font-size: 1em;
   line-height: 1.4;
 }
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #acd68b;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
