@@ -10,6 +10,60 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+   :root {
+    --text-color: #222;
+    --background-color: #FBAB7E;
+    --background-gradient: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    --selection-bg: #b3d4fc;
+    --border-color: #ccc;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: #eaeaea;
+      --background-color: #1a1a1a;
+      --background-gradient: linear-gradient(62deg, #232526 0%, #414345 100%);
+      --selection-bg: #555;
+      --border-color: #444;
+    }
+  }
+  
+  .light-mode {
+    --text-color: #222;
+    --background-color: #FBAB7E;
+    --background-gradient: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    --selection-bg: #b3d4fc;
+    --border-color: #ccc;
+  }
+  
+  .dark-mode {
+    --text-color: #eaeaea;
+    --background-color: #1a1a1a;
+    --background-gradient: linear-gradient(62deg, #232526 0%, #414345 100%);
+    --selection-bg: #555;
+    --border-color: #444;
+  }
+  
+  html {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: var(--background-gradient);
+    font-size: 1em;
+    font-family: "john-doe", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+  }
+  
+  ::selection {
+    background: var(--selection-bg);
+    text-shadow: none;
+  }
+  
+  hr {
+    border-top: 1px solid var(--border-color);
+  }
+  
   
 html {
   color: #222;
