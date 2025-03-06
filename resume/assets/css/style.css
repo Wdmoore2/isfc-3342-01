@@ -18,20 +18,20 @@
   
   body {
     font-family: "Bowlby One", sans-serif;
+  
   }
   img {
     max-width: 100%;
+   border-radius: 50%;
   }
   
-  .container {
-    max-width: 420px;
-    margin: 0 auto;
+  .container  {
     background-color: #acd68b;
-    padding: 20px;
-    box-sizing: border-box;
     border: 1px solid #e9e9e9;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  
   }
   
   nav ul {
@@ -113,15 +113,7 @@
     border-bottom: 1px solid var(--accent-color-1);
   }
   
-.container  {
-  background-color: #acd68b;
-  border: 1px solid #e9e9e9;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  padding: 20px;
-  width: 420px;
-}
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
