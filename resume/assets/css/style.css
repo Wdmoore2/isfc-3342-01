@@ -26,6 +26,7 @@
   
   }
   
+  
   .container  {
     background-color: #acd68b;
     border: 1px solid #e9e9e9;
@@ -117,7 +118,84 @@
   ul {
     list-style-type: none;
 }
- 
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap:20px;
+}
+
+.related-links a {
+  border: 1px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.5s ease;
+  color: #fff;
+}
+
+.related-links .svg-inline--fa {
+  font-size: 1.8em;
+  padding-top: 7px;
+}
+
+.related-links a:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Removed empty ruleset for #skills */
+#skills li {
+  list-style-type: square;
+}
+
+
+.job,
+.certificate {
+  border-bottom: 1px solid;
+  padding-bottom: 20px;
+}
+
+.job *[itemprop="jobTitle"],
+.job *[itemprop="name"],
+.job *[itemprop="url"],
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"] {
+  display: block;
+}
+
+.job h3 {
+  margin: 20px 0 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.page-title {
+  grid-area: title;
+
+  
+}
+
+#about {
+  grid-area: about;
+}
+#skills {
+  grid-area: skills;
+}
+#experience {
+  grid-area: experience;
+}
+#education {
+  grid-area: education;
+}
+
 
 
 /*
@@ -245,6 +323,43 @@ textarea {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
+
+
+@media screen and (min-width:769px) {
+  main.container {
+  max-width: 900px;
+grid-template-columns: 36.5% auto;
+grid-template-areas: 
+"title title" 
+"about about" 
+"skills expierence" 
+"education";
+  }
+
+  #about{
+    display:grid;
+    gap:2em;
+    grid-template-columns: 300px 1fr auto;
+    grid-template-areas:
+      "bio details details"
+      "related related related";
+  }
+  .bio{
+    grid-area:bio;
+  }
+  .details{
+    grid-area:details;
+  }
+    
+   .related-links{
+    grid-area:related;
+    border-bottom:1px solid #999;
+    padding-bottom:50px
+  } 
+    
+    
+  }
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
