@@ -325,40 +325,40 @@ textarea {
 }
 
 
-@media screen and (min-width:769px) {
+@media only screen and (min-width: 768px) {
   main.container {
-  max-width: 900px;
-grid-template-columns: 36.5% auto;
-grid-template-areas: 
-"title title" 
-"about about" 
-"skills expierence" 
-"education";
+    max-width: 900px;
+  }
+  header.container {
+    max-width: 900px;
+  }
+  #skills {
+    padding-left: calc(30% + 40px);
+  }
+  #experience {
+    padding-left: calc(30% + 40px);
+  }
+  #education {
+    padding-left: calc(30% + 40px);
+  }
+  #about {
+    display: flex;
+    flex-flow: row wrap;
   }
 
-  #about{
-    display:grid;
-    gap:2em;
-    grid-template-columns: 300px 1fr auto;
-    grid-template-areas:
-      "bio details details"
-      "related related related";
+  .bio {
+    flex: 1 30%;
   }
-  .bio{
-    grid-area:bio;
+  .details {
+    flex: 1 70%;
+    padding-left: 40px;
   }
-  .details{
-    grid-area:details;
+  .related-links {
+    border-bottom: 1px solid #999;
+    padding-bottom: 50px;
+    flex: 1;
   }
-    
-   .related-links{
-    grid-area:related;
-    border-bottom:1px solid #999;
-    padding-bottom:50px
-  } 
-    
-    
-  }
+}
 
 
 @media print,
