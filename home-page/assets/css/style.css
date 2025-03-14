@@ -63,8 +63,15 @@
   hr {
     border-top: 1px solid var(--border-color);
   }
-  
-  
+ ul {
+  display: grid;
+    grid-gap: 10px;
+    border-bottom: #000 3px solid;
+    
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+  }
+
 html {
   color: #222;
   font-size: 1em;
@@ -74,7 +81,52 @@ html {
   line-height: 1.4;
   background-color: #FBAB7E;
 background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
 
+img{
+  max-width:100%;
+}
+
+.container{
+  margin:40px auto;
+  width:70vw;
+  /* Set Max Content Width */
+  max-width:700px;
+}
+
+/* Customize Previous/Next/Dots/Autoplay */
+
+.slick-autoplay-toggle-button,
+.slick-prev .slick-prev-icon, .slick-next .slick-next-icon,
+.slick-dots li button .slick-dot-icon,
+.slick-dots li.slick-active button .slick-dot-icon {
+color: white;
+}
+
+/* Customize Previous/Next/Dots/Autoplay - Active State */
+
+.slick-next:focus .slick-next-icon,
+.slick-next:focus .slick-prev-icon,
+.slick-prev:focus .slick-next-icon,
+.slick-prev:focus .slick-prev-icon,
+.slick-dots li button:focus .slick-dot-icon:before,
+.slick-dots li.slick-active button:focus .slick-dot-icon,
+.slick-autoplay-toggle-button:focus 
+{
+  color:black;
+}
+.fadecontainer
+{
+  
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:left;
+  align-items:left;
+  top:0;
+  left:0;
+  z-index:1000;
+  display:none;
 
 }
 
