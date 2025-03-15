@@ -4,7 +4,7 @@
    Root Variables
    ========================================================================== */
 
-:root {
+   :root {
     --text-color: #222;
     --background-color: #FBAB7E;
     --background-gradient: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
@@ -34,6 +34,9 @@ html, body {
     line-height: 1.4;
     background-color: var(--background-color);
     background-image: var(--background-gradient);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Text Selection */
@@ -63,11 +66,30 @@ ul {
     padding: 20px;
 }
 
-/* Image & Media Styles */
+/* ==========================================================================
+   Image & Media Styles
+   ========================================================================== */
+
 img, svg, video {
     max-width: 100%;
+    height: auto;
+    display: block; /* Prevents unwanted space below inline images */
 }
 
+/* Restrict oversized images */
+img {
+    max-width: 100%;
+    max-height: 500px; /* Adjust this if needed */
+    object-fit: contain; /* Ensures the image scales properly */
+}
+
+/* Center images inside containers */
+.container img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Restrict large media elements */
 audio, canvas, iframe {
     max-width: 50%;
     max-height: 50%;
@@ -78,7 +100,10 @@ svg, video {
     vertical-align: middle;
 }
 
-/* Form Styles */
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
 fieldset {
     border: 0;
     margin: 0;
@@ -166,8 +191,9 @@ textarea {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -232,4 +258,3 @@ textarea {
         page-break-after: avoid;
     }
 }
-
