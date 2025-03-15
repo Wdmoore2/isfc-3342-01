@@ -1,353 +1,235 @@
 /*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Root Variables
    ========================================================================== */
+
    :root {
     --text-color: #222;
     --background-color: #FBAB7E;
     --background-gradient: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     --selection-bg: #b3d4fc;
     --border-color: #ccc;
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background-color: #1a1a1a;
-      --background-gradient: linear-gradient(62deg, #232526 0%, #414345 100%);
-      --selection-bg: #555;
-      --border-color: #444;
-    }
-  }
-  
+}
 
-  }
-  
-  html {
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --background-gradient: linear-gradient(62deg, #232526 0%, #414345 100%);
+        --selection-bg: #555;
+        --border-color: #444;
+    }
+}
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+html, body {
     color: var(--text-color);
-    background-color: var(--background-color);
-    background-image: var(--background-gradient);
     font-size: 1em;
     font-family: "john-doe", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.4;
-  }
-  
-  ::selection {
+    background-color: var(--background-color);
+    background-image: var(--background-gradient);
+}
+
+/* Text Selection */
+::selection {
     background: var(--selection-bg);
     text-shadow: none;
-  }
-  
-  hr {
-    border-top: 1px solid var(--border-color);
-  }
- ul {
-  display: grid;
-    grid-gap: 10px;
-    border-bottom: #000 3px solid;
-    
-    align-items: center;
-    padding: 20px 20px 20px 20px;
-  }
-
-html {
-  color: #222;
-  font-size: 1em;
-  font-family: "john-doe", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.4;
-  background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
-
-img{
-  max-width:100%;
-}
-
-.container{
-  margin:40px auto;
-  width:70vw;
-  /* Set Max Content Width */
-  max-width:700px;
-}
-
-/* Customize Previous/Next/Dots/Autoplay */
-
-.slick-autoplay-toggle-button,
-.slick-prev .slick-prev-icon, .slick-next .slick-next-icon,
-.slick-dots li button .slick-dot-icon,
-.slick-dots li.slick-active button .slick-dot-icon {
-color: white;
-}
-
-/* Customize Previous/Next/Dots/Autoplay - Active State */
-
-.slick-next:focus .slick-next-icon,
-.slick-next:focus .slick-prev-icon,
-.slick-prev:focus .slick-next-icon,
-.slick-prev:focus .slick-prev-icon,
-.slick-dots li button:focus .slick-dot-icon:before,
-.slick-dots li.slick-active button:focus .slick-dot-icon,
-.slick-autoplay-toggle-button:focus 
-{
-  color:black;
-}
-.fadecontainer
-{
-  
-  width:100%;
-  height:100%;
-  display:flex;
-  justify-content:left;
-  align-items:left;
-  top:0;
-  left:0;
-  z-index:1000;
-  display:none;
-
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: var(--selection-bg);
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
+/* ==========================================================================
+   Typography & Structure
+   ========================================================================== */
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+    border-top: 1px solid var(--border-color);
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img {
-  max-width: 50%;
-  max-height: 50%;
-  align-items: center;
+/* List Styles */
+ul {
+    display: grid;
+    gap: 10px;
+    border-bottom: #000 3px solid;
+    align-items: center;
+    padding: 20px;
 }
 
-svg,
-video {
-  vertical-align: middle;
+/* Image & Media Styles */
+img, svg, video {
+    max-width: 100%;
 }
 
-/*
- * Remove default fieldset styles.
- */
+audio, canvas, iframe {
+    max-width: 50%;
+    max-height: 50%;
+    align-items: center;
+}
 
+svg, video {
+    vertical-align: middle;
+}
+
+/* Form Styles */
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
-
-/*
- * Allow only vertical resizing of textareas.
- */
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Utility Classes
    ========================================================================== */
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+.hidden, [hidden] {
+    display: none !important;
 }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
 .visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
 }
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
 
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
 
 .clearfix::before,
 .clearfix::after {
-  content: "";
-  display: table;
+    content: "";
+    display: table;
 }
 
 .clearfix::after {
-  clear: both;
+    clear: both;
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Layout & Components
+   ========================================================================== */
+
+.container {
+    margin: 40px auto;
+    width: 70vw;
+    max-width: 700px;
+}
+
+/* Slick Carousel Customization */
+.slick-autoplay-toggle-button,
+.slick-prev .slick-prev-icon, 
+.slick-next .slick-next-icon,
+.slick-dots li button .slick-dot-icon,
+.slick-dots li.slick-active button .slick-dot-icon {
+    color: white;
+}
+
+.slick-next:focus .slick-next-icon,
+.slick-prev:focus .slick-prev-icon,
+.slick-dots li button:focus .slick-dot-icon:before,
+.slick-dots li.slick-active button:focus .slick-dot-icon,
+.slick-autoplay-toggle-button:focus {
+    color: black;
+}
+
+/* Fading Container */
+.fadecontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+/* ==========================================================================
+   Responsive Design
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+    /* Styles for wider viewports */
 }
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
-  /* Style adjustments for viewports less than 768px wide and more than 480px wide */
+    /* Styles for tablets */
 }
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
 
 @media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    *, *::before, *::after {
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+    a, a:visited {
+        text-decoration: underline;
+    }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
+    a[href^="#"]::after, a[href^="javascript:"]::after {
+        content: "";
+    }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+    pre {
+        white-space: pre-wrap !important;
+    }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+    tr, img {
+        page-break-inside: avoid;
+    }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+    h2, h3 {
+        page-break-after: avoid;
+    }
 }
 
