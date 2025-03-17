@@ -32,7 +32,8 @@ header {
 
   
   .container  {
-    background-color: #6B9AC4;
+    background: rgb(107,154,196);
+background: radial-gradient(circle, rgba(107,154,196,1) 0%, rgba(80,113,147,0.5690870098039216) 100%);
     border: 1px solid #2C3E50;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
