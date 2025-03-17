@@ -11,7 +11,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
   html {
-    color: black;
+    color: #1B2838;
     font-size: 1em;
     line-height: 1.4;
   }
@@ -21,15 +21,19 @@
   
   }
   img {
-    max-width: 100%;
-   border-radius: 50%;
-  
-  }
-  
+   max-width: 100%;
+  border-radius: 50%;
+   width: 200px;
+  height: 300px;
+}
+header {
+  background-color: #2C3E50;
+}
+
   
   .container  {
-    background-color: #acd68b;
-    border: 1px solid #e9e9e9;
+    background-color: #6B9AC4;
+    border: 1px solid #2C3E50;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
@@ -53,7 +57,7 @@
     border: 1px solid #000;
     text-align: center;
     text-decoration: none;
-    color: #222222;
+    color: #2C3E50;
     text-transform: uppercase;
     font-size: 0.75em;
     background: rgba(0, 0, 0, 0.65);
@@ -147,8 +151,10 @@
 .related-links a:hover {
   background: rgba(0, 0, 0, 0.95);
 }
-
-/* Removed empty ruleset for #skills */
+#objective {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
 #skills li {
   list-style-type: square;
 }
