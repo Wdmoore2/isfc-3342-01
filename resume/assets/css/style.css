@@ -29,7 +29,14 @@
 header {
   background-color: #2C3E50;
 }
-
+.personal
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
   
   .container  {
     background: rgb(107,154,196);
@@ -70,9 +77,6 @@ background: radial-gradient(circle, rgba(107,154,196,1) 0%, rgba(80,113,147,0.56
     background: rgba(0, 0, 0, 0.95);
   }
   
-  main {
-    padding: 1px 20px;
-  }
   
   main h1 {
     display: flex;
@@ -367,6 +371,14 @@ textarea {
   }
 }
 
+@media screen and (min-width:992px) {
+
+}
+
+ 
+
+
+ 
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
