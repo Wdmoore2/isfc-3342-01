@@ -29,10 +29,8 @@
 header {
   background-color: #2C3E50;
 }
-.personal
-{
-  display: flex;
-  justify-content: center;
+.personal {
+  display: none;
   align-items: center;
   flex-direction: column;
   padding: 20px;
@@ -332,7 +330,7 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+
 }
 
 
@@ -371,20 +369,114 @@ textarea {
   }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
 
+  body {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2C3E50;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+nav a {
+  padding: 10px 20px;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
+  nav a:hover {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
  
+  main.container,
+  header.container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
+  
+  #skills,
+  #experience,
+  #education {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0; 
+  }
 
  
+  #about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+  .bio {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  .details {
+    flex: 1 1 70%;
+    padding-left: 40px;
+  }
+
+  
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 300px;
+  }
+
+
+  .related-links {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #999;
+    padding-bottom: 50px;
+    flex: 1;
+    gap: 20px;
+  }
+}
+
+
+
+@media print and (-webkit-min-device-pixel-ratio: 1.25),
+       print and (min-resolution: 1.25dppx),
+       print and (min-resolution: 120dpi) {
+  /* Add your print-specific styles here */
 }
 
 /* ==========================================================================
