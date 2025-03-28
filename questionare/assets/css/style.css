@@ -1,0 +1,265 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* ==========================================================================
+   Root Variables
+   ========================================================================== */
+
+   :root {
+    --text-color: #222;
+    --background-color: #FBAB7E;
+    --background-gradient: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    --selection-bg: #b3d4fc;
+    --border-color: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --background-gradient: linear-gradient(62deg, #232526 0%, #414345 100%);
+        --selection-bg: #555;
+        --border-color: #444;
+    }
+}
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+html, body {
+    color: var(--text-color);
+    font-size: 1em;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    background-color: var(--background-color);
+    background-image: var(--background-gradient);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Text Selection */
+::selection {
+    background: var(--selection-bg);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: var(--selection-bg);
+}
+
+/* ==========================================================================
+   Typography & Structure
+   ========================================================================== */
+
+hr {
+    border-top: 1px solid var(--border-color);
+}
+
+/* List Styles */
+ul {
+    display: grid;
+    gap: 10px;
+    border-bottom: #000 3px solid;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Image & Media Styles
+   ========================================================================== */
+
+img, svg, video {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents unwanted space below inline images */
+}
+
+/* Restrict oversized images */
+img {
+    max-width: 100%;
+    max-height: 500px; /* Adjust this if needed */
+    object-fit: contain; /* Ensures the image scales properly */
+}
+
+/* Center images inside containers */
+.container img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Restrict large media elements */
+audio, canvas, iframe {
+    max-width: 50%;
+    max-height: 50%;
+    align-items: center;
+}
+
+svg, video {
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.hidden, [hidden] {
+    display: none !important;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Layout & Components
+   ========================================================================== */
+
+.container {
+    margin: 40px auto;
+    width: 70vw;
+    max-width: 700px;
+}
+
+/* Slick Carousel Customization */
+.slick-autoplay-toggle-button,
+.slick-prev .slick-prev-icon, 
+.slick-next .slick-next-icon,
+.slick-dots li button .slick-dot-icon,
+.slick-dots li.slick-active button .slick-dot-icon {
+    color: white;
+}
+
+.slick-next:focus .slick-next-icon,
+.slick-prev:focus .slick-prev-icon,
+.slick-dots li button:focus .slick-dot-icon:before,
+.slick-dots li.slick-active button:focus .slick-dot-icon,
+.slick-autoplay-toggle-button:focus {
+    color: black;
+}
+
+/* Fading Container */
+.fadecontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+    main.container {
+        max-width: 900px;
+    }
+}
+
+@media only screen and (min-width: 35em) {
+    /* Styles for wider viewports */
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+   
+}
+
+@media print {
+    *, *::before, *::after {
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a, a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]::after, a[href^="javascript:"]::after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    tr, img {
+        page-break-inside: avoid;
+    }
+
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
