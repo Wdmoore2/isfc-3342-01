@@ -12,15 +12,6 @@
     --border-color: #ccc;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #1a1a1a;
-        --background-gradient: linear-gradient(62deg, #232526 0%, #414345 100%);
-        --selection-bg: #555;
-        --border-color: #444;
-    }
-}
-
 /* ==========================================================================
    Global Styles
    ========================================================================== */
