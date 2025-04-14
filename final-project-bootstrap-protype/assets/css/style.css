@@ -276,3 +276,104 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+
+/* Responsive images */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  /* Typography spacing */
+  h3 {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 1.75rem;
+  }
+  
+  /* RSS Feed readability */
+  #rss-feed h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  #rss-feed p {
+    font-size: 1rem;
+  }
+  
+  #rss-feed a {
+    text-decoration: none;
+  }
+  
+  #rss-feed a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer spacing */
+  footer {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Breakpoints */
+  
+  /* Phones */
+  @media (max-width: 575.98px) {
+    h3 {
+      font-size: 1.25rem;
+      padding: 0 1rem;
+    }
+  
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    #rss-feed p {
+      font-size: 0.95rem;
+    }
+  
+    #rss-feed h6 {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Tablets */
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    h3 {
+      font-size: 1.5rem;
+    }
+  
+    .navbar-brand {
+      font-size: 1.35rem;
+    }
+  
+    #rss-feed p {
+      font-size: 1rem;
+    }
+  
+    #rss-feed h6 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Desktops */
+  @media (min-width: 992px) {
+    h3 {
+      font-size: 1.75rem;
+    }
+  
+    .navbar-brand {
+      font-size: 1.6rem;
+    }
+  
+    #rss-feed h6 {
+      font-size: 1.25rem;
+    }
+  
+      #rss-feed p {
+        font-size: 1.05rem;
+      }
+    }
+    
