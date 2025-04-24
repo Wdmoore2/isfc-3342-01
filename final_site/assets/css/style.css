@@ -168,6 +168,9 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
+  @media screen {
+    
+  }
   /* Style adjustments for viewports that meet the condition */
 }
 
