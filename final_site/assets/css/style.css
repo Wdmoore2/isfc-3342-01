@@ -12,6 +12,7 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	background-color: #CA3D31;
+	
   }
   
   img {
@@ -20,6 +21,20 @@ body {
 	object-fit: contain;
   }
   
+  .logo {
+	display: inline-block;
+	cursor: pointer;
+	transition: opacity 0.2s ease-in-out;
+  }
+  
+  .logo:hover {
+	opacity: 0.8;
+  }
+  
+  .hidden-text {
+	position: absolute;
+	left: -9999px;
+  }
   /* Navigation */
   .nav ul {
 	list-style: none;

@@ -1,24 +1,23 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJRE1MYLBZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJRE1MYLBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BJRE1MYLBZ');
+  </script>
 
-  gtag('config', 'G-BJRE1MYLBZ');
-</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Will's Mobile Web Homepage</title>
   <meta name="author" content="Will Moore" />
-  <link rel="stylesheet" href="../final_site/assets/css/style.css">
   <meta name="description" content="">
+
+  <link rel="stylesheet" href="../final_site/assets/css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/vrg1low.css">
-  
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -28,30 +27,30 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
+</head>
 <body>
   <div class="container">
-    <header>
-      <header class="nav">
-        <div class="logo">
-          <img src="../final_site/assets/img/ua-little-rock-h-rgb.webp" alt="Logo">
-          <img src="../final_site/assets/img/Delta Chi Logo.jpeg" alt="Delta Chi Logo">
-        <nav>
-          <ul>
-            <li><a href="parents.html">Recruitment</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="parents.html">Parents</a></li>
-            <li><a href="about.html">About Us</a></li>
-          </ul>
-        </nav>
-      </header>
-    
-      <main class="hero">
-        <h1>Promote Friendship, Develop Character, Advance Justice, Acquire a Sound Education</h1>
+    <header class="nav">
+     
+      <a href="index.html" class="logo hidden-text">
+        <img src="../final_site/assets/img/ua-little-rock-h-rgb.webp" alt="Logo">
+        <img src="../final_site/assets/img/Delta Chi Logo.jpeg" alt="Delta Chi Logo">
+      </a>
+      
+      <nav>
+        <ul>
+          <li><a href="recruitment.html">Recruitment</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="parents.html">Parents</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
 
-
-      <img src="../final_site/assets/img/IMG_7302.jpg" alt="Brothers of Delta Chi" >
+    <main class="hero">
+      <h1>Promote Friendship, Develop Character, Advance Justice, Acquire a Sound Education</h1>
+      <img src="../final_site/assets/img/IMG_7302.jpg" alt="Brothers of Delta Chi">
 
       <div class="container">
         <div class="card my-4 shadow-sm">
@@ -63,55 +62,60 @@
           </div>
         </div>
       </div>
-      
-      <script>
-        const feedUrl = 'https://cdn.mysitemapgenerator.com/shareapi/rss/27041032268';
-      
-        async function loadRSS() {
-          const container = document.getElementById('rss-feed');
-          container.innerHTML = 'Loading feed...';
-      
-          try {
-            const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`);
-            const data = await response.json();
-            const parser = new DOMParser();
-            const xml = parser.parseFromString(data.contents, "application/xml");
-            
-            const items = xml.querySelectorAll("item");
-            container.innerHTML = '';
-      
-            items.forEach((item, index) => {
-              if (index >= 3) return; // Only show first 3 items
-              
-              const title = item.querySelector("title")?.textContent || "No title";
-              const link = item.querySelector("link")?.textContent || "#";
-              const pubDate = new Date(item.querySelector("pubDate")?.textContent).toLocaleDateString();
-              const description = item.querySelector("description")?.textContent || "";
-      
-              const entry = document.createElement('div');
-              entry.classList.add('mb-4');
-              entry.innerHTML = `
-                <h6><a href="${link}" target="_blank" class="text-decoration-none text-dark">${title}</a></h6>
-                <small class="text-muted">${pubDate}</small>
-                <p class="mt-2">${description}</p>
-                <hr>
-              `;
-              container.appendChild(entry);
-            });
-          } catch (error) {
-            console.error('Error fetching RSS feed:', error);
-            container.innerText = 'Failed to load feed.';
-          }
-        }
-      
-        loadRSS();
-      </script>
-      </main>
-    
-      <footer>
-          © 2025 Will Moore
-        </div>  
-      </footer>
+    </main>
 
-    </body>
-    </html>
+    <footer>
+      © 2025 Will Moore
+    </footer>
+  </div> <!-- /.container -->
+
+  <script>
+    const feedUrl = 'https://cdn.mysitemapgenerator.com/shareapi/rss/27041032268';
+
+    async function loadRSS() {
+      const container = document.getElementById('rss-feed');
+      container.innerHTML = 'Loading feed...';
+
+      try {
+        const response = await fetch(
+          `https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`
+        );
+        const data = await response.json();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, "application/xml");
+        const items = xml.querySelectorAll("item");
+
+        container.innerHTML = '';
+        items.forEach((item, index) => {
+          if (index >= 3) return; // Only show first 3
+
+          const title       = item.querySelector("title")?.textContent       || "No title";
+          const link        = item.querySelector("link")?.textContent        || "#";
+          const dateText    = item.querySelector("pubDate")?.textContent;
+          const pubDate     = dateText ? new Date(dateText).toLocaleDateString() : "";
+          const description = item.querySelector("description")?.textContent || "";
+
+          const entry = document.createElement('div');
+          entry.classList.add('mb-4');
+          entry.innerHTML = `
+            <h6>
+              <a href="${link}" target="_blank" class="text-decoration-none text-dark">
+                ${title}
+              </a>
+            </h6>
+            <small class="text-muted">${pubDate}</small>
+            <p class="mt-2">${description}</p>
+            <hr>
+          `;
+          container.appendChild(entry);
+        });
+      } catch (error) {
+        console.error('Error fetching RSS feed:', error);
+        container.innerText = 'Failed to load feed.';
+      }
+    }
+
+    loadRSS();
+  </script>
+</body>
+</html>
