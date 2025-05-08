@@ -34,8 +34,8 @@
     <header class="nav">
      
       <a href="index.html" class="logo hidden-text">
-        <img src="../final_site/assets/img/ua-little-rock-h-rgb.webp" alt="Logo">
-        <img src="../final_site/assets/img/Delta Chi Logo.jpeg" alt="Delta Chi Logo">
+        <img class="ualogo" src="../final_site/assets/img/ua-little-rock-h-rgb.webp" alt="Logo">
+        <img class="dchilogo" src="../final_site/assets/img/Delta Chi Logo.jpeg" alt="Delta Chi Logo">
       </a>
       
       <nav>
@@ -52,70 +52,13 @@
       <h1>Promote Friendship, Develop Character, Advance Justice, Acquire a Sound Education</h1>
       <img src="../final_site/assets/img/IMG_7302.jpg" alt="Brothers of Delta Chi">
 
-      <div class="container">
-        <div class="card my-4 shadow-sm">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">Latest News</h5>
-          </div>
-          <div class="card-body bg-light" id="rss-feed">
-            Loading feed...
-          </div>
-        </div>
-      </div>
+   
+      
     </main>
 
     <footer>
       © 2025 Will Moore
     </footer>
-  </div> <!-- /.container -->
-
-  <script>
-    const feedUrl = 'https://cdn.mysitemapgenerator.com/shareapi/rss/27041032268';
-
-    async function loadRSS() {
-      const container = document.getElementById('rss-feed');
-      container.innerHTML = 'Loading feed...';
-
-      try {
-        const response = await fetch(
-          `https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`
-        );
-        const data = await response.json();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data.contents, "application/xml");
-        const items = xml.querySelectorAll("item");
-
-        container.innerHTML = '';
-        items.forEach((item, index) => {
-          if (index >= 3) return; // Only show first 3
-
-          const title       = item.querySelector("title")?.textContent       || "No title";
-          const link        = item.querySelector("link")?.textContent        || "#";
-          const dateText    = item.querySelector("pubDate")?.textContent;
-          const pubDate     = dateText ? new Date(dateText).toLocaleDateString() : "";
-          const description = item.querySelector("description")?.textContent || "";
-
-          const entry = document.createElement('div');
-          entry.classList.add('mb-4');
-          entry.innerHTML = `
-            <h6>
-              <a href="${link}" target="_blank" class="text-decoration-none text-dark">
-                ${title}
-              </a>
-            </h6>
-            <small class="text-muted">${pubDate}</small>
-            <p class="mt-2">${description}</p>
-            <hr>
-          `;
-          container.appendChild(entry);
-        });
-      } catch (error) {
-        console.error('Error fetching RSS feed:', error);
-        container.innerText = 'Failed to load feed.';
-      }
-    }
-
-    loadRSS();
-  </script>
+ 
 </body>
 </html>
