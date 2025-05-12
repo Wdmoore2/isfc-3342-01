@@ -8,10 +8,12 @@
   <meta name="author" content="Will Moore">
   <meta name="description" content="">
 
+  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="../final_site/assets/css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/vrg1low.css">
   <script src="https://kit.fontawesome.com/76eaf2d851.js" crossorigin="anonymous"></script>
 
+  <!-- Favicon / Meta -->
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
@@ -21,6 +23,13 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="site.webmanifest">
+
+  <!-- Optional: Form container height style -->
+  <style>
+    #wufoo-m1061ya11cmeuo8 {
+      min-height: 600px;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,7 +40,6 @@
         <img src="../final_site/assets/img/ua-little-rock-h-rgb.webp" alt="UA Little Rock Logo">
         <img src="../final_site/assets/img/Delta Chi Logo.jpeg" alt="Delta Chi Logo">
       </a>
-
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -45,14 +53,17 @@
 
     <!-- Main Content -->
     <main class="hero">
-      <h1>Contact Us</h1>
+      <div class="mission">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or would like to get in touch with the Delta Chi Chapter at UA Little Rock, use the form below.</p>
 
-      <!-- Wufoo Form Embed -->
-      <div id="wufoo-m1061ya11cmeuo8">
-        Loading form...
+        <!-- Wufoo Form Embed -->
+        <div id="wufoo-m1061ya11cmeuo8">
+          Loading form...
+        </div>
       </div>
 
-      <!-- Social Links -->
+      <!-- Social Media Links -->
       <div class="icons">
         <a href="https://www.instagram.com/lrdeltachi/" target="_blank">
           <i class="fa-brands fa-instagram fa-2x"></i> @LrDeltachi
@@ -69,7 +80,7 @@
     </footer>
   </div>
 
-  <!-- ✅ Wufoo Script - must be outside of the main script tag to render properly -->
+  <!-- Wufoo Script Embed -->
   <script type="text/javascript">
     var m1061ya11cmeuo8;
     (function (d, t) {
@@ -83,7 +94,7 @@
         'header': 'show',
         'ssl': true
       };
-      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
+      s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
       s.onload = s.onreadystatechange = function () {
         var rs = this.readyState;
         if (rs && rs !== 'complete' && rs !== 'loaded') return;
