@@ -24,10 +24,13 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <!-- Optional: Form container height style -->
+  <!-- Optional: Styling for iframe -->
   <style>
-    #wufoo-m1061ya11cmeuo8 {
-      min-height: 600px;
+    iframe {
+      width: 100%;
+      border: none;
+      margin-top: 1rem;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -57,10 +60,15 @@
         <h1>Contact Us</h1>
         <p>If you have any questions or would like to get in touch with the Delta Chi Chapter at UA Little Rock, use the form below.</p>
 
-        <!-- Wufoo Form Embed -->
-        <div id="wufoo-m1061ya11cmeuo8">
-          Loading form...
-        </div>
+        <!-- Wufoo Form Embed via IFRAME -->
+        <iframe
+          height="700"
+          allowTransparency="true"
+          frameborder="0"
+          scrolling="no"
+          src="https://wdmoore2.wufoo.com/embed/m1061ya11cmeuo8/">
+          <a href="https://wdmoore2.wufoo.com/forms/m1061ya11cmeuo8/">Fill out my Wufoo form!</a>
+        </iframe>
       </div>
 
       <!-- Social Media Links -->
@@ -79,37 +87,6 @@
       <p>© 2025 Will Moore</p>
     </footer>
   </div>
-
-  <!-- Wufoo Script Embed -->
-  <script type="text/javascript">
-    var m1061ya11cmeuo8;
-    (function (d, t) {
-      var s = d.createElement(t), options = {
-        'userName': 'wdmoore2',
-        'formHash': 'm1061ya11cmeuo8',
-        'autoResize': true,
-        'height': '597',
-        'async': true,
-        'host': 'wufoo.com',
-        'header': 'show',
-        'ssl': true
-      };
-      s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
-      s.onload = s.onreadystatechange = function () {
-        var rs = this.readyState;
-        if (rs && rs !== 'complete' && rs !== 'loaded') return;
-        try {
-          m1061ya11cmeuo8 = new WufooForm();
-          m1061ya11cmeuo8.initialize(options);
-          m1061ya11cmeuo8.display();
-        } catch (e) {
-          console.error("Wufoo embed failed to load:", e);
-        }
-      };
-      var scr = d.getElementsByTagName(t)[0];
-      scr.parentNode.insertBefore(s, scr);
-    })(document, 'script');
-  </script>
 </body>
 
 </html>
