@@ -45,18 +45,100 @@
 
     <!-- Main Content -->
     <main class="hero">
-      <h1>Contact Us</h1>
-<div id="wufoo-m1061ya11cmeuo8"> Fill out my <a href="https://wdmoore2.wufoo.com/forms/m1061ya11cmeuo8">online form</a>. </div> <script type="text/javascript"> var m1061ya11cmeuo8; (function(d, t) { var s = d.createElement(t), options = { 'userName':'wdmoore2', 'formHash':'m1061ya11cmeuo8', 'autoResize':true, 'height':'597', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { m1061ya11cmeuo8 = new WufooForm(); m1061ya11cmeuo8.initialize(options); m1061ya11cmeuo8.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script>
-     
+      <!-- Left Column: Contact Cards -->
+      <section class="contact-list">
+        <h2>Chapter Contacts</h2>
+        <div class="card-grid">
+          <div class="contact-card">
+            <h3>John Smith</h3>
+            <p class="title">President</p>
+            <p>(555) 123-4567</p>
+          </div>
+          <div class="contact-card">
+            <h3>Jane Doe</h3>
+            <p class="title">Vice President</p>
+            <p>(555) 987-6543</p>
+          </div>
+          <div class="contact-card">
+            <h3>Michael Johnson</h3>
+            <p class="title">Secretary</p>
+            <p>(555) 234-5678</p>
+          </div>
+          <div class="contact-card">
+            <h3>Emily Davis</h3>
+            <p class="title">Treasurer</p>
+            <p>(555) 345-6789</p>
+          </div>
+          <div class="contact-card">
+            <h3>Chris Allen</h3>
+            <p class="title">Recruitment Chair</p>
+            <p>(555) 456-7890</p>
+          </div>
+          <div class="contact-card">
+            <h3>Rachel Greene</h3>
+            <p class="title">Risk Manager</p>
+            <p>(555) 567-8901</p>
+          </div>
+          <div class="contact-card">
+            <h3>Tom Sanders</h3>
+            <p class="title">Alumni Relations</p>
+            <p>(555) 678-9012</p>
+          </div>
+          <div class="contact-card">
+            <h3>Sara Lee</h3>
+            <p class="title">Social Chair</p>
+            <p>(555) 789-0123</p>
+          </div>
+        </div>
+      </section>
 
-      <!-- Social Links -->
-      <div class="icons">
-        <a href="https://www.instagram.com/lrdeltachi/" target="_blank">
-          <i class="fa-brands fa-instagram fa-2x"></i> @LrDeltachi
-        </a>
-        <a href="https://www.facebook.com/people/UA-Little-Rock-Delta-Chi/100070855616092/" target="_blank">
-          <i class="fa-brands fa-facebook fa-2x"></i> UA Little Rock Delta Chi
-        </a>
+      <!-- Right Column: Wufoo Form + Social -->
+      <div>
+        <h1>Contact Us</h1>
+        <div id="wufoo-m1061ya11cmeuo8">
+          Fill out my <a href="https://wdmoore2.wufoo.com/forms/m1061ya11cmeuo8">online form</a>.
+        </div>
+        <script type="text/javascript">
+          var m1061ya11cmeuo8;
+          (function(d, t) {
+            var s = d.createElement(t),
+              options = {
+                'userName': 'wdmoore2',
+                'formHash': 'm1061ya11cmeuo8',
+                'autoResize': true,
+                'height': '597',
+                'async': true,
+                'host': 'wufoo.com',
+                'header': 'show',
+                'ssl': true
+              };
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+              var rs = this.readyState;
+              if (rs)
+                if (rs != 'complete')
+                  if (rs != 'loaded') return;
+              try {
+                m1061ya11cmeuo8 = new WufooForm();
+                m1061ya11cmeuo8.initialize(options);
+                m1061ya11cmeuo8.display();
+              } catch (e) {}
+            };
+            var scr = d.getElementsByTagName(t)[0],
+              par = scr.parentNode;
+            par.insertBefore(s, scr);
+          })(document, 'script');
+        </script>
+
+        <!-- Social Links -->
+        <div class="icons">
+          <a href="https://www.instagram.com/lrdeltachi/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2x"></i> @LrDeltachi
+          </a>
+          <a href="https://www.facebook.com/people/UA-Little-Rock-Delta-Chi/100070855616092/" target="_blank">
+            <i class="fa-brands fa-facebook fa-2x"></i> UA Little Rock Delta Chi
+          </a>
+        </div>
       </div>
     </main>
 
@@ -65,8 +147,6 @@
       <p>© 2025 Will Moore</p>
     </footer>
   </div>
-
-
 </body>
 
 </html>

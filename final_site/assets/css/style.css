@@ -79,34 +79,61 @@ header.nav {
 
 @media (min-width: 1024px) {
   .hero {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-items: start;
   }
 }
 
-/* === Letter or Mission Content === */
-.mission h1 {
-  font-size: 2rem;
+/* === Contact Cards === */
+.contact-list {
+  background-color: transparent;
+  color: white;
+}
+
+.contact-list h2 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.mission p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.mission a {
-  color: #ffffff;
-  text-decoration: underline;
+.contact-card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
 }
 
-/* === Responsive Image === */
-img.facebook {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 0 auto;
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* === Social Media Icons === */
@@ -149,6 +176,6 @@ footer {
 img,
 iframe {
   max-width: 100%;
-  height: 800px;
+  height: auto;
   display: block;
 }
