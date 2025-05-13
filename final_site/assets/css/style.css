@@ -149,6 +149,6 @@ footer {
 img,
 iframe {
   max-width: 100%;
-  height: auto;
+  height: 800px;
   display: block;
 }
